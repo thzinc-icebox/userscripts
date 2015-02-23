@@ -45,7 +45,7 @@ $(function () {
   var search = location.search
    .split(/[\?\&]+/g)
    .filter(function (e) {
-     var x = /^w=/.test(e);
+     var x = /^w=|^w$/.test(e);
      isWhiteSpaceIgnored = isWhiteSpaceIgnored || x;
      return !x;
    })
