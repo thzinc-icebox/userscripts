@@ -11,7 +11,7 @@ $(function () {
    .each(function () {
      var self = $(this);
      var sensitive = self.attr('href');
-     var insensitive = sensitive + '?w';
+     var insensitive = sensitive + '?w=1';
      self.data('sensitive', sensitive);
      self.data('insensitive', insensitive);
      self.attr('href', self.data(localStorage['ignore-whitespace'] ? 'insensitive' : 'sensitive'));
@@ -52,7 +52,7 @@ $(function () {
    .join('&');
   var baseUrl = location.pathname + '?' + search;
   var button = $('<a class="aui-button">')
-   .attr('href', isWhiteSpaceIgnored ? baseUrl : baseUrl + 'w=')
+   .attr('href', isWhiteSpaceIgnored ? baseUrl : baseUrl + 'w=1')
    .text(isWhiteSpaceIgnored ? 'View White Space Differences' : 'Ignore White Space');
 
   $('#pullrequest-actions')
