@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name        Ignore whitespace option on Bitbucket
 // @namespace   com.thzinc.bitbucket
+// @description Adds an "Ignore White Space" option to Bitbucket
 // @include     https://bitbucket.org/*
 // @version     1
 // @grant       none
